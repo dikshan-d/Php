@@ -34,7 +34,7 @@ $error="Something went wrong. Please try again";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Package Details</title>
+<title>Holiday Hype | Package Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -138,12 +138,12 @@ foreach($results as $result)
 				<div class="clearfix"></div>
 		</div>
 		<div class="selectroom_top">
-			<h2>Travels</h2>
+			<h2>Book Your Package Here</h2>
 			<div class="selectroom-info animated wow fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp; margin-top: -70px">
 				<ul>
 				
 					<li class="spe">
-						<label class="inputLabel">Comment</label>
+						<label class="inputLabel">Description</label>
 						<input class="special" type="text" name="comment" required="">
 					</li>
 					<?php if($_SESSION['login'])
