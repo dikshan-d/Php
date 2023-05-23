@@ -38,20 +38,12 @@ include('includes/config.php');
 
 
 
-
-
-
 <!---holiday---->
 <div class="container">
 	<div class="holiday">
 	
-
-
-
-	
 	<h3>Popular Packages</h3>
-
-					
+				
 <?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
 $query = $dbh->prepare($sql);
 $query->execute();
@@ -92,12 +84,12 @@ foreach($results as $result)
 <?php include('includes/footer.php');?>
 <!-- signup -->
 <?php include('includes/signup.php');?>			
-<!-- //signu -->
+
 <!-- signin -->
 <?php include('includes/signin.php');?>			
-<!-- //signin -->
+
 <!-- write us -->
 <?php include('includes/write-us.php');?>			
-<!-- //write us -->
+
 </body>
 </html>

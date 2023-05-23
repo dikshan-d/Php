@@ -107,7 +107,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 				</div>
 <!--heder end here-->
 	<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Update Page Data </li>
+                <li class="breadcrumb-item">Home<i class="fa fa-angle-right"></i>Update Page Data </li>
             </ol>
 		<!--grid-->
  	<div class="grid-form">
@@ -125,9 +125,6 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 									<div class="col-sm-8">
 									   <select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
                   <option value="" selected="selected" class="form-control">***Select One***</option>
-                  <!-- <option value="manage-pages.php?type=terms">terms and condition</option>
-                  <option value="manage-pages.php?type=privacy">privacy and policy</option>
-                  <option value="manage-pages.php?type=aboutus">aboutus</option>  -->
                   <option value="manage-pages.php?type=contact">Contact and About Us</option>
                 </select>
 									</div>
@@ -139,13 +136,6 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 			
 			switch($_GET['type'])
 			{
-				case "terms" :
-									echo "Terms and Conditions";
-									break;
-				
-				case "privacy" :
-									echo "Privacy And Policy";
-									break;
 				
 				case "aboutus" :
 									echo "About US";
@@ -159,15 +149,6 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 				case "objectives" :
 									echo "Objectives";
 									break;						
-				case "disclaimer" :
-									echo "Disclaimer";
-									break;
-				case "vbnet" :
-									echo "Partner With Us";
-									break;
-				case "candc" :
-									echo "Super Brand";
-									break;
 				case "contact" :
 									echo "Contact Us";
 									break;

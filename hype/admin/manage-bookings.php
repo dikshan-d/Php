@@ -22,7 +22,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 			. "We would like to inform you that, Your package has been cancel.<br>"
 			. "We would like to apologize for the inconvenience!<br>"
 			. "Sincerely,<br>"
-			. "TMS";
+			. "Holiday Hype";
 		$bid = intval($_GET['bkid']);
 		$status = 2;
 		$cancelby = 'a';
@@ -65,7 +65,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 			. "We would like to inform you that, Your package has been confirm.<br>"
 			. "Thank you and enjoy travelling!<br>"
 			. "Safe Travels,<br>"
-			. "TMS";
+			. "Holiday Hype";
 		$bcid = intval($_GET['bckid']);
 		$status = 1;
 		$cancelby = 'a';
@@ -190,7 +190,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 				</div>
 				<!--heder end here-->
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Bookings</li>
+					<li class="breadcrumb-item">Home<i class="fa fa-angle-right"></i>Manage Bookings</li>
 				</ol>
 				<div class="agile-grids">
 					<!-- tables -->
@@ -274,19 +274,16 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 						});
 					</script>
-					<!-- /script-for sticky-nav -->
-					<!--inner block start here-->
+					
 					<div class="inner-block">
 
 					</div>
-					<!--inner block end here-->
-					<!--copy rights start here-->
+					
 					<?php include('includes/footer.php'); ?>
-					<!--COPY rights end here-->
+					
 				</div>
 			</div>
-			<!--//content-inner-->
-			<!--/sidebar-menu-->
+			
 			<?php include('includes/sidebarmenu.php'); ?>
 			<div class="clearfix"></div>
 		</div>
@@ -314,9 +311,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 		<!--js -->
 		<script src="js/jquery.nicescroll.js"></script>
 		<script src="js/scripts.js"></script>
-		<!-- Bootstrap Core JavaScript -->
+		
 		<script src="js/bootstrap.min.js"></script>
-		<!-- /Bootstrap Core JavaScript -->
+		
 
 	</body>
 

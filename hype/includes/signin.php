@@ -13,7 +13,7 @@ if (isset($_POST['signin'])) {
 		$results = $query->fetchAll(PDO::FETCH_OBJ);
 		if ($query->rowCount() > 0) {
 			$_SESSION['login'] = $_POST['email'];
-			echo "<script type='text/javascript'> document.location = 'package-list.php'; </script>";
+			echo "<script type='text/javascript'> document.location = 'index.php'; </script>";
 		} else {
 
 			echo "<script>alert('Invalid Details');</script>";
@@ -37,8 +37,8 @@ if (isset($_POST['signin'])) {
 					<div class="login">
 						<div class="login-left">
 							<ul>
-								<div style="width:200px;height:180px;border:9px outset #1ebdb8;">
-									<font color=#1ebdb8>
+								<div style="width:200px;height:180px;border:9px outset #35a492;">
+									<font color=#35a492>
 										<h1> Welcome to Holiday Hype</h1>
 									</font>
 								</div>

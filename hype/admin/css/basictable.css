@@ -1,7 +1,3 @@
-/*
- * jQuery Basic Table
- * Author: Jerry Low
- */
 
 table.bt thead,
 table.bt tbody th {
@@ -19,7 +15,7 @@ table.bt tbody td {
   display: flex;
   vertical-align: top;
 
-  /* IE 9 */
+  
   float: left\9;
   width: 100%\9;
 }

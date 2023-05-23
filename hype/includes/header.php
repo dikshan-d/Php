@@ -39,8 +39,7 @@
 		</div>
 	
 		<div class="lock fadeInDown animated" data-wow-delay=".5s"> 
-			<!-- <li><i class="fa fa-lock"></i></li>
-            <li><div class="securetxt">SAFE &amp; SECURE </div></li> -->
+			
 			<div class="clearfix"></div>
 		</div>
 		<div class="clearfix"></div>
@@ -66,10 +65,9 @@
 					<nav class="cl-effect-1">
 						<ul class="nav navbar-nav">
 							<li><a href="index.php">Home</a></li>
-							<!-- <li><a href="page.php?type=aboutus">About</a></li> -->
+							
 								<li><a href="package-list.php">Packages</a></li>
-								<!-- <li><a href="page.php?type=privacy">Privacy Policy</a></li> -->
-								<!-- <li><a href="page.php?type=terms">Terms of Use</a></li> -->
+								
 								<li><a href="page.php?type=contact">Contact and About Us</a></li>
 								<?php if($_SESSION['login']){?>
 								<li><a href="#" data-toggle="modal" data-target="#myModal3"> Issue</a></li>

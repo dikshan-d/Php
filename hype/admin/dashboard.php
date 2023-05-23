@@ -39,7 +39,7 @@ else{
 <?php include('includes/header.php');?>
 <!--header end here-->
 		<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a> <i class="fa fa-angle-right"></i></li>
+                <li class="breadcrumb-item">Home<i class="fa fa-angle-right"></i></li>
             </ol>
 <!--four-grids here-->
 		<div class="four-grids">
@@ -153,8 +153,7 @@ $cnt5=$query5->rowCount();
 <div class="inner-block">
 
 </div>
-<!--inner block end here-->
-<!--copy rights start here-->
+
 <?php include('includes/footer.php');?>
 </div>
 </div>
@@ -186,10 +185,9 @@ $cnt5=$query5->rowCount();
 <!--js -->
 <script src="js/jquery.nicescroll.js"></script>
 <script src="js/scripts.js"></script>
-<!-- Bootstrap Core JavaScript -->
+
    <script src="js/bootstrap.min.js"></script>
-   <!-- /Bootstrap Core JavaScript -->	   
-<!-- morris JavaScript -->	
+  
 <script src="js/raphael-min.js"></script>
 <script src="js/morris.js"></script>
 <script>

@@ -50,15 +50,14 @@ include('includes/config.php');
 			<div class="clearfix"></div>
 	</div>
 </div>
-<!--- /contact ---->
 
 <!-- sign -->
 <?php include('includes/signup.php');?>	
 <!-- signin -->
 <?php include('includes/signin.php');?>	
-<!-- //signin -->
+
 <!-- write us -->
 <?php include('includes/write-us.php');?>	
-<!-- //write us -->
+
 </body>
 </html>

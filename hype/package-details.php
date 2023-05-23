@@ -20,17 +20,18 @@ $query->bindParam(':comment',$comment,PDO::PARAM_STR);
 $query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
-if($lastInsertId)
-{
-$msg="Booked Successfully";
+if ($lastInsertId) {
+    $msg = "Booked Successfully";
+    $payButton = '<button id="payment-button">Pay with Khalti</button>';
+} else {
+    $error = "Something went wrong. Please try again";
 }
-else 
-{
-$error="Something went wrong. Please try again";
-}
+
+
 
 }
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -87,12 +88,21 @@ $error="Something went wrong. Please try again";
 		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Book Your Package</h1>
 	</div>
 </div>
+
 <!--- /banner ---->
-<!--- selectroom ---->
+
 <div class="selectroom">
 	<div class="container">	
 		  <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+				<?php if (!empty($msg)) : ?>
+    <div class="success-message">
+        <!-- <p><?php echo $msg; ?></p> -->
+        <?php echo $payButton; ?>
+    </div>
+<?php endif; ?>
+
+
 <?php 
 $pid=intval($_GET['pkgid']);
 $sql = "SELECT * from tbltourpackages where PackageId=:pid";
@@ -118,15 +128,38 @@ foreach($results as $result)
 				<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
 					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
 					<div class="ban-bottom">
-				<div class="bnr-right">
-				<label class="inputLabel">From</label>
-				<input class="date" id="datepicker" type="text" placeholder="dd-mm-yyyy"  name="fromdate" required="">
-			</div>
+				
 			<div class="bnr-right">
-				<label class="inputLabel">To</label>
-				<input class="date" id="datepicker1" type="text" placeholder="dd-mm-yyyy" name="todate" required="">
-			</div>
-			</div>
+    <label class="inputLabel">From</label>
+    <input class="date" id="datepicker" type="text" placeholder="dd-mm-yyyy" name="fromdate" required="">
+</div>
+<div class="bnr-right">
+    <label class="inputLabel">To</label>
+    <input class="date" id="datepicker1" type="text" placeholder="dd-mm-yyyy" name="todate" required="">
+</div>
+</div>
+
+<script>
+    // Get the current date
+    var currentDate = new Date();
+
+    // Convert the date to the desired format (dd-mm-yyyy)
+    var day = currentDate.getDate();
+    var month = currentDate.getMonth() + 1;
+    var year = currentDate.getFullYear();
+    var formattedDate = day + '-' + month + '-' + year;
+
+    // Set the minimum date for the datepicker
+    $('#datepicker').datepicker({
+        minDate: formattedDate,
+        dateFormat: 'dd-mm-yy'
+    });
+
+    $('#datepicker1').datepicker({
+        minDate: formattedDate,
+        dateFormat: 'dd-mm-yy'
+    });
+</script>
 						<div class="clearfix"></div>
 				<div class="grand">
 					<p>Grand Total</p>
@@ -134,7 +167,8 @@ foreach($results as $result)
 				</div>
 			</div>
 		<h3>Package Details</h3>
-				<p style="padding-top: 1%"><?php echo htmlentities($result->PackageDetails);?> </p>	
+				<p style="padding-top: 1%"><?php echo nl2br(htmlentities($result->PackageDetails)); ?> </p>
+				<!-- <p style="padding-top: 1%"><?php echo htmlentities($result->PackageDetails);?> </p>	 -->
 				<div class="clearfix"></div>
 		</div>
 		<div class="selectroom_top">
@@ -165,17 +199,68 @@ foreach($results as $result)
 
 
 	</div>
+	<div id="payment-status"></div>
 </div>
-<!--- /selectroom ---->
-<<!--- /footer-top ---->
+
+<!--- /footer-top ---->
 <?php include('includes/footer.php');?>
 <!-- signup -->
 <?php include('includes/signup.php');?>			
-<!-- //signu -->
+
 <!-- signin -->
 <?php include('includes/signin.php');?>			
-<!-- //signin -->
+
 <!-- write us -->
 <?php include('includes/write-us.php');?>
+<script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
+
+<script>
+        var config = {
+            // replace the publicKey with yours
+            "publicKey": "test_public_key_67e4b9c1a3e148188196f59378355c75",
+            "productIdentity": "1234567890",
+              "productName": "Test Product",
+              "productUrl": "http://example.com/test-product",
+              "paymentPreference": [
+                "KHALTI",
+                "EBANKING",
+                "MOBILE_BANKING",
+                "CONNECT_IPS",
+                "SCT",
+              ],
+              "eventHandler": {
+                onSuccess(payload) {
+                  // Handle successful payment
+                  console.log(payload);
+                  // Update the payment status message
+                  // 
+                  var paymentStatusElement = document.getElementById('payment-status');
+                  paymentStatusElement.innerText = 'Payment successful!';
+                  paymentStatusElement.style.textAlign = 'center';
+                  paymentStatusElement.style.display = 'flex';
+                  paymentStatusElement.style.justifyContent = 'center';
+                  paymentStatusElement.style.alignItems = 'center';
+                },
+                onError(error) {
+                  // Handle payment error
+                  console.log(error);
+                  // Update the payment status message
+                  document.getElementById('payment-status').innerHTML = 'Payment failed.';
+                },
+                onClose() {
+                  // Handle checkout widget close event
+                  console.log('Widget closed');
+                }
+              }
+            };
+
+            var checkout = new KhaltiCheckout(config);
+            var btn = document.getElementById("payment-button");
+            btn.onclick = function() {
+              // Show the Khalti checkout widget when the user clicks on the payment button
+              checkout.show({amount: 1000}); // Replace 1000 with your actual payment amount in paisa
+            };
+</script>
+
 </body>
 </html>

@@ -94,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!--heder end here-->
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Update Tour Package </li>
+					<li class="breadcrumb-item">Home<i class="fa fa-angle-right"></i>Update Tour Package </li>
 				</ol>
 				<!--grid-->
 				<div class="grid-form">
@@ -151,13 +151,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<input type="text" class="form-control1" name="packagefeatures" id="packagefeatures" placeholder="Package Features Eg-free Pickup-drop facility" value="<?php echo htmlentities($result->PackageFetures); ?>" required>
 												</div>
 											</div>
-
-
 											<div class="form-group">
-												<label for="focusedinput" class="col-sm-2 control-label">Package Details</label>
-												<div class="col-sm-8">
-													<textarea class="form-control" rows="5" cols="50" name="packagedetails" id="packagedetails" placeholder="Package Details" required><?php echo htmlentities($result->PackageDetails); ?></textarea>
-												</div>
+    											<label for="focusedinput" class="col-sm-2 control-label">Package Details</label>
+    											<div class="col-sm-8">
+        											<textarea class="form-control" rows="5" cols="50" name="packagedetails" id="packagedetails" placeholder="Package Details" required>
+            											<?php echo nl2br(htmlentities($result->PackageDetails)); ?>
+        											</textarea>
+    											</div>
+											</div>
+
+
+											
 											</div>
 											<div class="form-group">
 												<label for="focusedinput" class="col-sm-2 control-label">Package Image</label>
@@ -216,13 +220,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						});
 					</script>
-					<!-- /script-for sticky-nav -->
-					<!--inner block start here-->
+					
 					<div class="inner-block">
 
 					</div>
-					<!--inner block end here-->
-					<!--copy rights start here-->
+					
 					<?php include('includes/footer.php'); ?>
 					<!--COPY rights end here-->
 				</div>
@@ -232,6 +234,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<?php include('includes/sidebarmenu.php'); ?>
 			<div class="clearfix"></div>
 		</div>
+		<script type="text/javascript" src="nicEdit.js"></script>
+
 		<script>
 			var toggle = true;
 
@@ -258,7 +262,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<script src="js/scripts.js"></script>
 		<!-- Bootstrap Core JavaScript -->
 		<script src="js/bootstrap.min.js"></script>
-		<!-- /Bootstrap Core JavaScript -->
+
 
 	</body>
 

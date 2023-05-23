@@ -92,8 +92,7 @@ return true;
 		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Change Your Password</h1>
 	</div>
 </div>
-<!--- /banner-1 ---->
-<!--- privacy ---->
+
 <div class="privacy">
 	<div class="container">
 		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Change Your Password</h3>
@@ -128,16 +127,15 @@ return true;
 		
 	</div>
 </div>
-<!--- /privacy ---->
-<!--- footer-top ---->
+
 <!--- /footer-top ---->
 <?php include('includes/footer.php');?>
 <!-- signup -->
 <?php include('includes/signup.php');?>			
-<!-- //signu -->
+
 <!-- signin -->
 <?php include('includes/signin.php');?>			
-<!-- //signin -->
+
 <!-- write us -->
 <?php include('includes/write-us.php');?>
 </body>

@@ -102,7 +102,7 @@ $msg="Enquiry  successfully read";
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Enquiries</li>
+                <li class="breadcrumb-item">Home<i class="fa fa-angle-right"></i>Manage Enquiries</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
@@ -178,19 +178,16 @@ foreach($results as $result)
 			 
 		});
 		</script>
-		<!-- /script-for sticky-nav -->
-<!--inner block start here-->
+	
 <div class="inner-block">
 
 </div>
-<!--inner block end here-->
-<!--copy rights start here-->
+
 <?php include('includes/footer.php');?>
-<!--COPY rights end here-->
+
 </div>
 </div>
-  <!--//content-inner-->
-		<!--/sidebar-menu-->
+  <
 						<?php include('includes/sidebarmenu.php');?>
 							  <div class="clearfix"></div>		
 							</div>
@@ -217,9 +214,8 @@ foreach($results as $result)
 <!--js -->
 <script src="js/jquery.nicescroll.js"></script>
 <script src="js/scripts.js"></script>
-<!-- Bootstrap Core JavaScript -->
+
    <script src="js/bootstrap.min.js"></script>
-   <!-- /Bootstrap Core JavaScript -->	   
 
 </body>
 </html>

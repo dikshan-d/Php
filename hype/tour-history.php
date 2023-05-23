@@ -147,24 +147,20 @@ foreach($results as $result)
 <td><?php echo htmlentities($result->fromdate);?></td>
 <td><?php echo htmlentities($result->todate);?></td>
 <td><?php echo htmlentities($result->comment);?></td>
-<td><?php if($result->status==0)
-{
-echo "Pending";
-}
-if($result->status==1)
-{
-echo "Confirmed";
-}
-if($result->status==2 and  $result->cancelby=='u')
-{
-echo "Canceled by you at " .$result->upddate;
-} 
-if($result->status==2 and $result->cancelby=='a')
-{
-echo "Canceled by admin at " .$result->upddate;
-
-}
-?></td>
+<td>
+<?php 
+  if ($result->status == 0) {
+    echo "Pending";
+  } else if ($result->status == 1) {
+    echo "Confirmed";
+    
+  } else if ($result->status == 2 and $result->cancelby == 'u') {
+    echo "Canceled by you at " . $result->upddate;
+  } else if ($result->status == 2 and $result->cancelby == 'a') {
+    echo "Canceled by admin at " . $result->upddate;
+  }
+?>
+</td>
 <td><?php echo htmlentities($result->regdate);?></td>
 <?php if($result->status==2)
 {
@@ -181,17 +177,17 @@ echo "Canceled by admin at " .$result->upddate;
 
 		
 	</div>
+
 </div>
-<!--- /privacy ---->
-<!--- footer-top ---->
+
 <!--- /footer-top ---->
 <?php include('includes/footer.php');?>
 <!-- signup -->
 <?php include('includes/signup.php');?>			
-<!-- //signu -->
+
 <!-- signin -->
 <?php include('includes/signin.php');?>			
-<!-- //signin -->
+
 <!-- write us -->
 <?php include('includes/write-us.php');?>
 </body>

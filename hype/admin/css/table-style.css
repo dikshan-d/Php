@@ -1,9 +1,3 @@
-/*
- * Basic Table Demo CSS.
- */
-
-
-
 
 p.credits {
   font-size: .8125rem;
@@ -128,10 +122,7 @@ table.bt tbody td:last-of-type .bt-content {
   padding-bottom: 10px;
 }
 
-/*
- * Example 4:
- * Media query over js resize
- */
+
 @media only screen and (max-width: 568px) {
   #table-no-resize thead {
     display: none;
@@ -144,7 +135,6 @@ table.bt tbody td:last-of-type .bt-content {
     padding: 0;
     vertical-align: top;
 
-    /* IE 9 */
     float: left\9;
     width: 100%\9;
   }
@@ -176,10 +166,7 @@ table.bt tbody td:last-of-type .bt-content {
   }
 }
 
-/*
- * Example 5:
- * Two axis styling
- */
+
 table.two-axis tr td:first-of-type {
     background: #e7f4fd;
 }
@@ -201,10 +188,7 @@ table.two-axis tr td:first-of-type {
   }
 }
 
-/*
- * Example 6:
- * Max height
- */
+
 .bt-wrapper.active {
   margin-top: 1.5em;
 }

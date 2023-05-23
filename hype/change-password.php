@@ -128,16 +128,15 @@ if (strlen($_SESSION['login']) == 0) {
 
 				</div>
 			</div>
-			<!--- /privacy ---->
-			<!--- footer-top ---->
+			
 			<!--- /footer-top ---->
 			<?php include('includes/footer.php'); ?>
 			<!-- signup -->
 			<?php include('includes/signup.php'); ?>
-			<!-- //signu -->
+			
 			<!-- signin -->
 			<?php include('includes/signin.php'); ?>
-			<!-- //signin -->
+			
 			<!-- write us -->
 			<?php include('includes/write-us.php'); ?>
 	</body>

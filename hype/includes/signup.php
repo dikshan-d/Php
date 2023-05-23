@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-if (isset($_POST['submit'])) {
+if (isset($_POST['create'])) {
 	$fname = trim($_POST['fname']);
 	$mnumber = trim($_POST['mobilenumber']);
 	$email = trim($_POST['email']);
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 				$query->execute();
 				$lastInsertId = $dbh->lastInsertId();
 				if ($lastInsertId) {
-					header('location:created.php');
+					echo "<script type='text/javascript'> document.location = 'Create.php'; </script>";;
 				} else {
 					echo "<script>alert('Something went wrong. Please try again.');</script>";
 				}
@@ -32,11 +32,7 @@ if (isset($_POST['submit'])) {
 		}
 
 		
-	} else {
-		echo "<script>alert('Please fill all fields');</script>";
-		// header('location:index.php');
-		// exit();
-	}
+	} 
 }
 ?>
 <!--Javascript for check email availabilty-->
@@ -69,8 +65,8 @@ if (isset($_POST['submit'])) {
 						<div class="login">
 							<div class="login-left">
 								<ul>
-									<div style="width:200px;height:180px;border:9px outset #1ebdb8;">
-										<font color=#1ebdb8>
+									<div style="width:200px;height:180px;border:9px outset #35a492;">
+										<font color=#35a492>
 											<h1> Welcome to Holiday Hype</h1>
 										</font>
 									</div>
@@ -86,7 +82,7 @@ if (isset($_POST['submit'])) {
 									<input type="text" value="" placeholder="Email id" name="email" id="email" onBlur="checkAvailability()" autocomplete="off" required="">
 									<span id="user-availability-status" style="font-size:12px;"></span>
 									<input type="password" value="" placeholder="Password" name="password" required="">
-									<input type="submit" name="submit" id="submit" value="CREATE ACCOUNT">
+									<input type="submit" name="create" id="create" value="CREATE ACCOUNT">
 								</form>
 							</div>
 							<div class="clearfix"></div>

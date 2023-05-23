@@ -111,16 +111,15 @@ foreach($results as $result)
 		
 	</div>
 </div>
-<!--- /privacy ---->
-<!--- footer-top ---->
+
 <!--- /footer-top ---->
 <?php include('includes/footer.php');?>
 <!-- signup -->
 <?php include('includes/signup.php');?>			
-<!-- //signu -->
+
 <!-- signin -->
 <?php include('includes/signin.php');?>			
-<!-- //signin -->
+
 <!-- write us -->
 <?php include('includes/write-us.php');?>
 </body>

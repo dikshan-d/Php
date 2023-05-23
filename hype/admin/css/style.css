@@ -1,9 +1,3 @@
-/*
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
-*/
 html, body{
 	font-family: 'Roboto', sans-serif;
     font-size: 100%;
@@ -16,7 +10,7 @@ body a{
 	-moz-transition:0.5s all;
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
-	background:#011D4A!mportant;
+	
 }
 a:focus, a:active, a:hover ,a.dropdown-toggle{
     outline: none;
@@ -69,7 +63,7 @@ li.breadcrumb-item i.fa.fa-angle-right {
 	vertical-align: middle;
 }
 .breadcrumb > li {
-    color: #050505 ! important;
+    color: #35a492 ! important;
     font-size: 16px ! important;
     vertical-align: middle ! important;
 }
@@ -108,7 +102,7 @@ li.breadcrumb-item i.fa.fa-angle-right {
    margin-right: 0em;
     margin-top: -8px;
 	color: #fff;
-    background: #1b93e1;
+    background: #35a492;
     border-radius: 0;
 }
 .page-container.sidebar-collapsed-back .sidebar-icon {
@@ -186,7 +180,7 @@ label.col-sm-2.control-label {
     position: relative;
     display: block;
     padding: 13px 20px;
-    color: rgb(56, 187, 220);
+    color: #35a492;
     white-space: nowrap;
     z-index: 2;
     background-color: #333333;
@@ -249,7 +243,7 @@ background-color:#00C6D7!important;
     width: 100%;
     padding: 15px 14px 15px;
     box-sizing: border-box;
-    background: #1bd0e1;
+    background: #35a492;
     text-align: center;
 }
 .sidebar-icon {
@@ -260,8 +254,8 @@ background-color:#00C6D7!important;
     font-size: 19px;
     padding: 5px 10px;
     border-radius: 0px;
-    color: #1b93e1;
-    background: #fff;
+    color: white;
+    
     float: none;
 }
 ul#menu i {
@@ -280,13 +274,7 @@ li#menu-academico{
 .panel-body.ont {
     padding: 14px;
 }
-/*#logo
-{
-    width: 150px;
-    height: 64px;
-    vertical-align: middle;
-    -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
-}*/
+
 
 .fa-html5 {
   color: #fff;
@@ -336,12 +324,12 @@ li#menu-academico{
 .profile_details {
     float: left;
     width: 24.25%;
-    background: #1bc7e1;
+    background: #35a492;
     text-align: center;
     padding: 0.3em 1em;
 }
 .logo-w3-agile {
-    background: #00d2cb;
+    background: #35a492;
     float: left;
     width: 65.25%;
     text-align: center;
@@ -890,7 +878,7 @@ ul.dropdown-menu.drp-mnu li {
     margin-bottom: 0;
 }
 .copyrights p a{
-    color: #1b93e1;
+    color: #35a492;
 }
 .copyrights p a:hover{
     color:#696969;
@@ -898,22 +886,22 @@ ul.dropdown-menu.drp-mnu li {
 /*--header --*/
 /*---four-grids-----*/ 
 .four-agileits {
-    background: #4349ff;
+    background: #35a492;
     text-align: center;
     padding: 2em 0;
 }
 .four-agileinfo {
-    background: #a422ef;
+    background: #35a492;
     padding: 2em 0;
     text-align: center;
 }
 .four-w3ls {
-    background: #d2005f;
+    background: #35a492;
     padding: 2em 0;
     text-align: center;
 }
 .four-wthree {
-    background: #8e44ad;
+    background: #35a492;
     padding: 2em 0;
     text-align: center;
 }
@@ -1816,7 +1804,7 @@ code {
 }
 .btn-primary {
     color: #fff;
-    background-color: #00bcd4;
+    background-color: #35a492;
 }
 .btn-danger {
     color: #fff;
@@ -4715,7 +4703,7 @@ ul.bt-list {
 }
 /*---signin-----*/
 .main-wthree{
-		background:plum;
+		background:#aaf0c9;
 		min-height:794px;
 }
 span.prfil-img img {
@@ -4734,7 +4722,7 @@ span.prfil-img img {
 .main-wthree form span {
     width: 29%;
     float: left;
-    background: blueviolet;
+    background: #35a492;
     padding: 10.2px 10px;
     position: relative;
     color: #fff;
@@ -4749,7 +4737,7 @@ span.prfil-img img {
     height: 0;
     right: -11px;
     border-top: 6px solid rgba(0, 0, 0, 0);
-    border-left: 11px solid blueviolet;
+    border-left: 11px solid #35a492;
     border-bottom: 6px solid rgba(0, 0, 0, 0);
     top: 14px;
 }
@@ -4800,7 +4788,7 @@ span.prfil-img img {
     text-align: right;
 }
 .main-wthree input[type="submit"]{
-	background-color:blueviolet;
+	background-color:#35a492;
 	color:#fff;
 	padding:11px;
 	outline: none;
@@ -6425,4 +6413,3 @@ ul.dropdown-menu {
     padding: 7px 9px 8px 15px;
 }
 }
-/***responsive***/

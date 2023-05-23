@@ -114,7 +114,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a><i class="fa fa-angle-right"></i>Manage Issues</li>
+                <li class="breadcrumb-item">Home<i class="fa fa-angle-right"></i>Manage Issues</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
@@ -186,13 +186,12 @@ foreach($results as $result)
 			 
 		});
 		</script>
-		<!-- /script-for sticky-nav -->
-<!--inner block start here-->
+	->
+
 <div class="inner-block">
 
 </div>
-<!--inner block end here-->
-<!--copy rights start here-->
+
 <?php include('includes/footer.php');?>
 <!--COPY rights end here-->
 </div>
@@ -227,7 +226,7 @@ foreach($results as $result)
 <script src="js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
    <script src="js/bootstrap.min.js"></script>
-   <!-- /Bootstrap Core JavaScript -->	   
+	   
 
 </body>
 </html>

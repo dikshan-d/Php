@@ -104,7 +104,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 				</div>
 				<!--heder end here-->
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Profile <i class="fa fa-angle-right"></i> Change Password</li>
+					<li class="breadcrumb-item">Home<i class="fa fa-angle-right"></i>Profile <i class="fa fa-angle-right"></i> Change Password</li>
 				</ol>
 				<!--grid-->
 				<div class="grid-form">
@@ -180,18 +180,15 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 			});
 		</script>
-		<!-- /script-for sticky-nav -->
-		<!--inner block start here-->
 		<div class="inner-block">
 
 		</div>
-		<!--inner block end here-->
-		<!--copy rights start here-->
+		
 		<?php include('includes/footer.php'); ?>
-		<!--COPY rights end here-->
+	
 		</div>
 		</div>
-		<!--//content-inner-->
+	
 		<!--/sidebar-menu-->
 		<?php include('includes/sidebarmenu.php'); ?>
 		<div class="clearfix"></div>
